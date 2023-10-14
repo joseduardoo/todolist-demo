@@ -1,4 +1,26 @@
-{"date":"2023-10-12T20:53:25.230Z","task":"otra tarea ","status":"pending","_id":"JpFTETXRnwjbSmBT"}
+{"date":"2023-10-12T20:53:25.230Z","task":"otra tarea ","status":{"requestId":"hAkavHKhD_V-iOCWywyNP","signal":{}},"_id":"JpFTETXRnwjbSmBT"}
 {"date":"2023-10-12T20:53:37.964Z","task":"mas tarea :(","status":{"requestId":"Wo5YToNEf2HOoNXarNn82","signal":{}},"_id":"MS4twNAoIGG3FLes"}
 {"date":"2023-10-12T20:55:34.196Z","task":"tarea","status":{"requestId":"yKuH3ctL2O0qmQqPqSQob","signal":{}},"_id":"PmHWhGYMWyYU1rvy"}
-{"date":"2023-10-12T20:53:25.230Z","task":"otra tarea ","status":{"requestId":"hAkavHKhD_V-iOCWywyNP","signal":{}},"_id":"JpFTETXRnwjbSmBT"}
+{"date":"2023-10-14T19:23:46.759Z","task":"otra tarea mas mas ","status":"pending","_id":"nUTTboRgbo6PdmjQ"}
+{"$$deleted":true,"_id":"JpFTETXRnwjbSmBT"}
+{"$$deleted":true,"_id":"MS4twNAoIGG3FLes"}
+{"$$deleted":true,"_id":"PmHWhGYMWyYU1rvy"}
+{"$$deleted":true,"_id":"nUTTboRgbo6PdmjQ"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"pending","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:14.112Z","task":"tarea 2","status":"pending","_id":"t7fRUaHGiBRem2eX"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"finished","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"pending","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"finished","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"pending","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"finished","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:11.167Z","task":"tarea 1 ","status":"pending","_id":"22Jr0rf0ltvsv1pA"}
+{"date":"2023-10-14T19:24:14.112Z","task":"tarea 2","status":"finished","_id":"t7fRUaHGiBRem2eX"}
+{"date":"2023-10-14T19:24:14.112Z","task":"tarea 2","status":"pending","_id":"t7fRUaHGiBRem2eX"}
+{"$$deleted":true,"_id":"22Jr0rf0ltvsv1pA"}
+{"$$deleted":true,"_id":"t7fRUaHGiBRem2eX"}
+{"date":"2023-10-14T19:24:41.565Z","task":"tarea 1 ","status":"pending","_id":"y9LL0zmJ681TtmVq"}
+{"date":"2023-10-14T19:24:43.543Z","task":"tarea 2","status":"pending","_id":"7EijvjgLOwv4zXgy"}
+{"date":"2023-10-14T19:24:45.368Z","task":"tarea 3","status":"pending","_id":"QHySH6E4610hPJPW"}
+{"date":"2023-10-14T19:24:47.227Z","task":"tarea 4","status":"pending","_id":"BzkvkA9nVHsXo69J"}
+{"date":"2023-10-14T19:24:43.543Z","task":"tarea 2","status":"finished","_id":"7EijvjgLOwv4zXgy"}
+{"date":"2023-10-14T19:24:41.565Z","task":"tarea 1 ","status":"finished","_id":"y9LL0zmJ681TtmVq"}

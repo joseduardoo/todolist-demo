@@ -27,25 +27,25 @@ const addTask = createAsyncThunk("tasks/addTask", async (task) => {
       body: JSON.stringify(task),
     });
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error("Error adding task:", error);
   }
 })
 ////
-const toggleTask = createAsyncThunk("task/toggleTask", async (taskId, status) => {
+const toggleTask = createAsyncThunk("task/toggleTask", async (taskData) => {
+  const status = taskData.newStatus;
   try {
-    const response = await fetch(`${API_URL}/${taskId}`, {
+    const response = await fetch(`${API_URL}/${taskData.idTask}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ status }),
+      body: JSON.stringify({status}),
     });
+
     const data = await response.json();
-    console.log("esta es la data que manda toggle",data);
-    return data;
+    return taskData;
   } catch (error) {
     console.error("Error toggling task:", error);
   }
@@ -72,25 +72,29 @@ const todoSlice = createSlice({
     builder
       .addCase(fetchTasks.fulfilled, (state, action) => {
         state.tasks = action.payload; 
-        console.log("se ejecuto esta funcion ");
       })
       .addCase(addTask.fulfilled, (state, action) => {
         state.tasks.push(action.payload);
-        console.log("se ejecuto ela tarea addTask y se imprimira el nuevo estado:");
       })
-      .addCase(toggleTask.fulfilled, (state,action) => {
-        const updatedTasks = state.tasks.map((task) =>
-        task._id === action.payload._id ? action.payload._id : task
-        );
+      .addCase(toggleTask.fulfilled, (state, action) => {
+        const updatedTasks = [];
+        for (const taskData of state.tasks) {
+          if (taskData._id === action.payload.idTask) {
+            const date = taskData.date;
+            const task = taskData.task;
+            const status = action.payload.newStatus;
+            const _id = action.payload.idTask;
+            updatedTasks.push({date,task,status,_id});
+          } else {
+            updatedTasks.push(taskData);
+          }
+        }
         state.tasks = updatedTasks;
       })
-      .addCase(deleteTask.fulfilled, (state,action) => {
+      .addCase(deleteTask.fulfilled, (state, action) => {
         state.tasks = state.tasks.filter((task) => task._id !== action.payload);
       })
-
-
   }
-  
 })
 
 export {addTask, deleteTask, fetchTasks, toggleTask}; 

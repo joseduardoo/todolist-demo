@@ -30,7 +30,7 @@ const template = html<TasksList>`
       </div>
     `
   )}
-`;
+`
 
 const styles = css`
   .task {
@@ -53,7 +53,6 @@ export class TasksList extends connect(store)(FASTElement) {
 
   stateChanged(state: any) {
     const tasks = state.todo.tasks;
-    console.log("se ejecuto stateChanged")
     if (tasks && tasks.length >= 0) {
       this.tasks = [...tasks];
     }
@@ -66,7 +65,8 @@ export class TasksList extends connect(store)(FASTElement) {
 
   toggleTaskStatus(task: any) {
     const newStatus = task.status === "pending" ? "finished" : "pending";
-    store.dispatch(toggleTask(task._id, newStatus));
+    const idTask= task._id;
+    store.dispatch(toggleTask({idTask, newStatus}));
   }
 
   deleteTaskById(taskId: string) {
